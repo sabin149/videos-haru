@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  margin: 0 auto;
+  width: 90%
+}
+
+header {
+  background: aqua;
+  width: 100%;
+  min-height: 100px;
+}
+.test{
+  background-color: red;
+  width: 30%;
+  height: 200px;
+  margin: 0 0 0 2.5%;
+  float: left;
+}
+aside{
+width: 100%;
+}
+
+@media screen and (max-width:768px)
+{
+.test
+  {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,319 @@
+<link rel="stylesheet" href="documentation.css">
+<nav id="navbar">
+  <header>HTML Documentation</header>
+  <ul type=none>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#Prerequisites">Prerequisites</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#Basic_html_document">Basic HTML Document</a>
+    </li>
+    <li><a class="nav-link" href="#HTML_tags">HTML Tags</a></li>
+    <li><a class="nav-link" href="#HTML_structure">HTML Structure</a></li>
+    <li>
+      <a class="nav-link" href="#Heading_tags">Heading Tags</a>
+    </li>
+    <li><a class="nav-link" href="#Paragraph_tag">Paragraph Tag</a></li>
+    <li><a class="nav-link" href="#Line_break_tag">Line Break Tag</a></li>
+    <li><a class="nav-link" href="#Id_attributes">Id Attributes</a></li>
+    <li><a class="nav-link" href="#Title_attributes">Title Attributes</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.
+      </p>
+      <ul type=square>
+        <li>Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is called Hypertext. </li>
+        <li>As its name suggests, HTML is a Markup Language which means you use HTML to simply "mark-up" a text document with tags that tell a Web browser how to structure it to display. </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Prerequisites">
+    <header>Prerequisites</header>
+    <article>
+      <p>Before proceeding with this tutorial you should have a basic working knowledge with Windows or Linux operating system, additionally you must be familiar with: </p>
+      <ul type=square>
+        <li>Experience with any text editor like notepad, notepad++, or Edit plus etc. </li>
+        <li>How to create directories and files on your computer</li>
+        <li>How to navigate through different directories. </li>
+        <li>How to type content in a file and save them on a computer</li>
+        <li>Understanding about images in different formats like JPEG, PNG format. </li>
+      </ul>
+    </article>
+    <section class='main-section' id='Basic_html_document'>
+      <header>
+        Basic HTML Document
+      </header>
+      <article>
+        <p>In its simplest form, following is an example of an HTML document: </p>
+        <code>
+          <xmp>
+            <!DOCTYPE html>
+            <html>
+
+            <body>
+              <h1>My First Heading</h1>
+              <p>My first paragraph.</p>
+            </body>
+
+            </html>
+          </xmp>
+        </code>
+        <p>Either you can use Try it option available at the top right corner of the code box to check the result of this HTML code, or let's save it in an HTML file test.htm using your favorite text editor. Finally open it using a web browser like
+          Internet Explorer or Google Chrome, or Firefox etc. It must show the following output: </p>
+        <img src="https://www.w3schools.com/html/img_chrome.png" alt="output" width="450" height="300">
+
+      </article>
+    </section>
+    <section class='main-section' id='HTML_tags'>
+      <header>HTML Tags</header>
+      <article>
+        <p>As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces <<strong>Tag Name</strong>>. Except few tags, most of the tags have their corresponding closing
+            tags. For example,<<strong>html</strong>> has its closing tag <<strong>/html</strong>> and <<strong>body</strong>> tag has its closing tag <<strong>/body</strong>> tag etc. </p>
+        <p>Above example of HTML document uses the following tags: </p>
+        <table width=100%>
+          <tr>
+            <th>Tags</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>
+              <<strong>!doctype</strong>>
+            </td>
+            <td>This tag defines the document type and HTML version. </td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>html</strong>>
+            </td>
+            <td>This tag encloses the complete HTML document and mainly comprises of document header which is represented by <<strong>head</strong>>...<<strong>/head</strong>> and document body which is represented by <<strong>body</strong>>...
+                    <<strong>/body</strong>> tags. </td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>head</strong>>
+            </td>
+            <td>This tag represents the document's header which can keep other HTML tags like <<strong>title</strong>>, <<strong>link</strong>> etc. </td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>title</strong>>
+            </td>
+            <td>The <<strong>title</strong>> tag is used inside the <<strong>head</strong>> tag to mention the document title.</td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>body</strong>>
+            </td>
+            <td>
+              This tag represents the document's body which keeps other HTML tags like <<strong>p</strong>>, <<strong>div</strong>> etc.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>h1</strong>>
+            </td>
+            <td>This tag represents the heading. </td>
+          </tr>
+          <tr>
+            <td>
+              <<strong>p</strong>>
+            </td>
+            <td>This tag represents a paragraph.</td>
+          </tr>
+        </table>
+        <p>To learn HTML, you will need to study various tags and understand how they behave, while formatting a textual document. Learning HTML is simple as users have to learn the usage of different tags in order to format the text or images to
+          make a beautiful webpage.</p>
+        <p>World Wide Web Consortium (W3C) recommends to use lowercase tags starting from HTML 4.</p>
+      </article>
+    </section>
+    <section class='main-section' id='HTML_structure'>
+      <header>
+        HTML Structure
+      </header>
+      <article>
+        <p>A typical HTML document will have the following structure:</p>
+        <code>
+          <xmp>Document declaration tag
+            <html>
+
+            <head>
+              Document header related tags
+            </head>
+
+            <body>
+              Document body related tags
+            </body>
+
+            </html>
+          </xmp>
+        </code>
+        <p>We will study all the header and body tags in subsequent chapters, but for now let's see what is document declaration tag. </p>
+      </article>
+    </section>
+    <section class='main-section' id='Heading_tags'>
+      <header>
+        Heading Tags
+      </header>
+      <article>
+        <p>Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements h1, h2 h3, h4, h5, and h6 with anchor bracket. While displaying any heading, browser adds one
+          line before and one line after that heading. </p>
+        <strong>Example</strong><code>
+          <xmp>
+            <!DOCTYPE html>
+            <html>
+
+            <head>
+              <title>Heading Example</title>
+            </head>
+
+            <body>
+              <h1> Heading level 1</h1>
+              <h2>Heading level 2</h2>
+              <h3> Heading level 3</h3>
+              <h4>Heading level 4</h4>
+              <h5>Heading level 5</h5>
+              <h6>Heading level 6</h6>
+            </body>
+
+            </html>
+          </xmp>
+        </code>
+        <p>This will produce the following result: </p>
+        <img src="https://tinyurl.com/yyngokvl" alt="heading tags">
+      </article>
+    </section>
+    <section class='main-section' id='Paragraph_tag'>
+      <header>
+        Paragraph Tag
+      </header>
+      <article>
+        The < <strong>p</strong>> tag offers a way to structure your text into different paragraphs. Each paragraph of text should go in between an opening < <strong>p</strong>> and a closing< <strong>/p</strong>> tag as shown below in the example:
+              <strong> Example</strong>
+              <code>
+                <xmp>
+                  <!DOCTYPE html>
+                  <html>
+
+                  <head>
+                    <title>Paragraph Example</title>
+                  </head>
+
+                  <body>
+                    <p>Here is a first paragraph of text.</p>
+                    <p>Here is a second paragraph of text.</p>
+                    <p>Here is a third paragraph of text.</p>
+                  </body>
+
+                  </html>
+                </xmp>
+              </code>
+              This will produce the following result:
+              <pre>Here is a first paragraph of text.
+Here is a second paragraph of text.
+Here is a third paragraph of text.</pre>
+      </article>
+    </section>
+    <section>
+      <header class='main-section' id='Line_break_tag'>
+        Line Break Tag
+      </header>
+      <article>
+        <p>Whenever you use the <<strong>br/</strong>> element, anything following it starts from the next line. This tag is an example of an empty element, where you do not need opening and closing tags, as there is nothing to go in between them.
+            The <<strong>br/ </strong>> tag has a space between the characters br and the forward slash. If you omit this space, older browsers will have trouble rendering the line break, while if you miss the forward slash character and just use
+              <<strong>br </strong>> it is not valid in XHTML.<p>
+                  <strong>Example</strong><code>
+                    <xmp>
+                      <!DOCTYPE html>
+                      <html>
+
+                      <head>
+                        <title>Line Break Example</title>
+                      </head>
+
+                      <body>
+                        <p>Hello<br />
+                          You delivered your assignment on time.<br />
+                          Thanks<br />
+                          Mahnaz</p>
+                      </body>
+
+                      </html>
+                    </xmp>
+                  </code>
+                <p>This will produce the following result:</p>
+                <pre>Hello You delivered your assignment on time. <br>Thanks Mahnaz</pre>
+      </article>
+    </section>
+    <section class='main-section' id='Id_attributes'>
+      <header>
+        Id Attributes
+      </header>
+      <article>
+        <p>The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page. There are two primary reasons that you might want to use an id attribute on an element:</p>
+        <ul type=square>
+          <li>If an element carries an id attribute as a unique identifier, it is possible to identify just that element and its content.</li>
+
+          <li> If you have two elements of the same name within a Web page (or style sheet), you can use the id attribute to distinguish between elements that have the same name.</li>
+        </ul>
+        <p>We will discuss style sheet in separate tutorial. For now, let's use the id attribute to distinguish between two paragraph elements as shown below.
+        </p>
+        <strong>Example</strong>
+        <code>
+          <xmp>
+            <p id="html">This para explains what is HTML</p>
+            <p id="css">This para explains what is Cascading Style Sheet</p>
+          </xmp>
+        </code>
+      </article>
+    </section>
+    <section class='main-section' id='Title_attributes'>
+      <header>
+        Title Attributes
+      </header>
+      <article>
+        <p>The title attribute gives a suggested title for the element. They syntax for the title attribute is similar as explained for id attribute:
+        </p>
+        <p>
+          The behavior of this attribute will depend upon the element that carries it, although it is often displayed as a tooltip when cursor comes over the element or while the element is loading. </p>
+        <strong>Example</strong>
+        <code>
+          <xmp>
+            <!DOCTYPE html>
+            <html>
+
+            <head>
+              <title>The title Attribute Example</title>
+            </head>
+
+            <body>
+              <h3 title="Hello HTML!">Titled Heading Tag Example</h3>
+            </body>
+
+            </html>
+          </xmp>
+        </code>
+        <p>This will produce the following result:</p>
+        <pre>Titled Heading Tag Example</pre>
+      </article>
+    </section>
+    <section class='main-section' id='Reference'>
+      <header>
+        Reference
+      </header>
+      <article>
+        <ul type=none>
+          <li>
+            All the documentation in this page is taken from
+            <a href="https://www.tutorialspoint.com/html/html_tutorial.pdf" target="_blank">tutorialspoint</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+</main>

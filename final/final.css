@@ -1,0 +1,92 @@
+#main {
+  display: flex;
+  color: white;
+  height: 80px;
+  width: 100%;
+  margin-top:-8px;
+  background-color: #1E90FF;
+
+}
+
+#first {
+  margin: 0px 110px 0px 250px;
+}
+
+#second {
+  margin: 0px 110px 0px 0px;
+}
+
+#third {
+  margin: 0px 0px 0px 0px;
+}
+
+i {
+  font-size: 35px;
+  top: -60px;
+  left: -45px;
+  position: relative;
+}
+
+.p1 {
+  font-weight: 800;
+}
+
+.p2 {
+  margin-top: -10px;
+}
+
+#fourth {
+  margin:10px 0px 0px 450px;
+}
+
+#usa {
+  width: 10%;
+  position: relative;
+  top: 5px;
+  left: -115px;
+}
+
+select {
+  background-color: #1E90FF;
+  border: none;
+  color: white;
+}
+
+option {
+  color: black;
+}
+
+#nav {
+  height: 50px;
+  background: white;
+  padding: 10px 0px 0px 0px;
+}
+
+#nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 60px 0px 0px;
+  font-weight: bold;
+}
+
+#flio {
+  margin:0px 125px 0px 245px;
+  font-size: 25px;
+}
+
+#contact {
+  margin:0px 85px 0px 0px;
+}
+#pilot {
+  text-transform: uppercase;
+}
+#plane-i{
+  font-size: 35px;
+  position: relative;
+  top: 8px;
+  left: -1145px;
+  color:#1E90FF;
+}
+.plane{
+
+}

@@ -1,0 +1,81 @@
+#first {
+  background-color: white;
+  height: 600px;
+  width: 300px;
+  margin: 0 auto;
+  border: white solid 5px;
+}
+
+#first2 {
+  background-color: white;
+  height: 80px;
+  width: 300px;
+  float: left;
+  margin: 0 auto;
+}
+
+#second {
+  background-color: green;
+  height: 40px;
+  width: 300px;
+  /* cm:keeping at 100% avoids getting scrollbar and fits in browser*/
+  float: left;
+  margin: 0 auto;
+}
+
+#third {
+  background-color: blue;
+  height: 200px;
+  width: 100%;
+  float: left;
+}
+
+#third2 {
+  background-color: purple;
+  height: 200px;
+  width: 60%;
+  float: left;
+}
+
+#fourth {
+  background-color: red;
+  height: 200px;
+  width: 100%;
+  float: right;
+}
+
+#fourth1 {
+  background-color: black;
+  height: 150px;
+  width: 80px;
+  float: left;
+  margin: 25px 10px;
+}
+
+#fourth2 {
+  background-color: black;
+  height: 150px;
+  width: 80px;
+  float: left;
+  margin: 25px 10px;
+}
+
+#fourth3 {
+  background-color: black;
+  height: 150px;
+  width: 80px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+
+#sixth {
+  background-color: cyan;
+  height: 40px;
+  width: 100%;
+  float: right;
+}
+
+#img{
+  float: left;
+}

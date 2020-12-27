@@ -1,0 +1,22 @@
+.daraz {
+  float: left;
+  width: 20%;
+}
+img {
+  width: 90%;
+  padding: 10px 10px 0px 10px;
+  margin: 20px auto;
+  display: block;
+}
+.info{
+/* display: none; */
+float: left;
+position:absolute;
+top:0px;
+left: 113px;
+}
+
+.daraz:hover  .info{
+  display: block;
+background-color:red;
+}

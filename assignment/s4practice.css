@@ -1,0 +1,45 @@
+.red {
+  background-color: red;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+#xx-small {
+  font-size: 9px;
+}
+
+#x-small {
+  font-size: 11px;
+}
+
+#small {
+  background-color: green;
+  color: white;
+  font-size: 13px;
+}
+
+#medium {
+  background-color: skyblue;
+  font-size: 16px;
+}
+
+#large {
+  background-color: purple;
+  color: white;
+  font-size: 18px;
+}
+
+#x-large {
+  font-size: 24px;
+}
+
+#xx-large {
+  font-size: 30px;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+}

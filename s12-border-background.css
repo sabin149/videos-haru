@@ -1,0 +1,55 @@
+/* #test {
+  background: url(naruto.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 300px;
+
+  background:linear/radical-gradient(to left top, green,black,blue, lightblue);
+
+  /* background: rgba(102, 0, 0, 0.5); */
+  height: 400px;
+  width: 500px;
+  border: 5px solid red;
+  /* background: green; */
+} */
+
+#test2 {
+  background: url(naruto.jpg);
+  background-repeat: no-repeat;
+  background-size: 500px 300px;
+  height: 200px;
+  width: 500px;
+  border: 5px solid red;
+  margin: 50px;
+  opacity: 0.3;
+}
+
+#test2 h1 {
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+
+table {
+  width: 300px;
+}
+
+th {
+  background-color: blue;
+  color: white;
+}
+
+tr {
+  background-color: lightblue;
+  color: white;
+}
+
+.stripe {
+  background-color: brown;
+}
+
+#test3 {
+  margin-top: 50px;
+}

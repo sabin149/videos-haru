@@ -1,0 +1,159 @@
+#main {
+  width: 750px;
+  margin: 40px auto;
+}
+
+#header {
+  background-color: #F6FBF6;
+  height: 100px;
+  width: 750px;
+  float: left;
+}
+
+#header-1 {
+  background: #F6FBF6;
+  height: 120px;
+  width: 300px;
+  float: left;
+}
+
+.logo {
+  width: 95%;
+  padding: 20px 0px 0px 10px;
+}
+
+#header-2 {
+  background: #F6FBF6;
+  height: 120px;
+  width: 310px;
+  float: left;
+  font-size: 17px;
+  padding-top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+}
+
+#nav {
+  background-color: green;
+  height: 50px;
+  width: 750px;
+  float: left;
+}
+
+
+#nav ul
+{
+list-style: none;
+/*
+list-style-type: upper-roman;
+list-style-image: url(arrow.png);
+list-style-position: inside;
+*/
+margin: 0;
+padding: 0;
+}
+
+#nav ul li
+{
+float: left;
+margin: 10px 20px;
+}
+
+#nav ul li a
+{
+color: #ffffff;
+font-size: 20px;
+font-weight: bold;
+padding: 5px 10px;
+text-decoration: none;
+}
+
+#nav ul li ul
+{
+background-color:  purple;
+margin-left: -20px;
+display: none;
+position: absolute;
+}
+
+#nav ul li ul li
+{
+float: none;
+padding: 0;
+}
+
+#nav ul li:hover ul
+{
+display: block;
+}
+
+
+#slider {
+  background-color: yellow;
+  height: 180px;
+  width: 750px;
+  float: left;
+}
+
+#slider-left {
+  background-color: purple;
+  height: 180px;
+  width: 550px;
+  float: left;
+}
+
+.img {
+  border: 4px solid white;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content {
+  background-color: violet;
+  height: 280px;
+  width: 750px;
+  float: left;
+}
+
+.all-content {
+  background-color: #DBEEFD;
+  height: 220px;
+  width: 210px;
+  float: left;
+  margin: 30px 20px 10px 10px;
+
+}
+
+#content-left {
+  margin: 30px 20px 30px 30px;
+}
+
+p {
+  text-align: center;
+}
+
+/* #content-center {
+  background-color: blue;
+  height: 160px;
+  width: 210px;
+  float: left;
+  margin: 20px;
+}
+
+#content-right {
+  background-color: blue;
+  height: 160px;
+  width: 210px;
+  float: left;
+  margin: 20px;
+} */
+#last {
+  background-color: orange;
+  height: 50px;
+  width: 750px;
+  float: left;
+}
