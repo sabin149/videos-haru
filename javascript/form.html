@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+form
+{
+border: 1px solid grey;
+padding: 20px;
+}
+form p label
+{
+float: left;
+width: 100px;
+}
+</style>
+</head>
+<body>
+<div id="first">
+<form name="reg-frm" >
+<p>
+<label>Name</label>
+<input type="text" id="name" name="name" required />
+</p>
+<p>
+<label>Address</label>
+<input type="text" id="address" name="address" required />
+</p>
+<p>
+<label>Phone</label>
+<input type="text" id="phone" name="phone" required />
+</p>
+<p>
+<label>Email</label>
+<input type="email" id="email" name="email" required />
+</p>
+<p>
+<label>Username</label>
+<input type="text" id="username" name="username" required />
+</p>
+<p>
+<label>Password</label>
+<input type="password" id="password" name="password" required />
+</p>
+<p>
+<label>Re-Password</label>
+<input type="password" id="password1" name="password1" required />
+</p>
+<p>
+<input type="button" id="btn" value="Submit" onclick="test()" />
+</p>
+</form>
+</div>
+
+<div id="output">
+
+</div>
+
+ <script>
+function test()
+{
+let  name = document.getElementById('name').value;
+let address = document.forms['reg-frm']['address'].value;
+var phone = document.forms['reg-frm']['phone'].value;
+var email = document.forms['reg-frm']['email'].value;
+var username = document.forms['reg-frm']['username'].value;
+var password = document.forms['reg-frm']['password'].value;
+var password1 = document.forms['reg-frm']['password1'].value;
+
+var valid_name = /^[A-Z a-z]+$/;
+if(password != password1)
+{
+alert('Password mismatch');
+}
+else if(!name.match(valid_name))
+{
+alert('Name can only have alphabets');
+}
+else
+{
+var output = '<table border="1">'+
+'<tr><td>Name:</td><td>'+ name +'</td></tr>'+
+'<tr><td>Phone:</td><td>'+ phone +'</td></tr>'+
+'<tr><td>Email:</td><td>'+ email +'</td></tr>'+
+'<tr><td>Address:</td><td>'+ address +'</td></tr>'+
+'<tr><td>Username:</td><td>'+ username +'</td></tr>'+
+'</table>';
+document.getElementById('output').innerHTML = output;
+}
+}
+//print multiplication table - try to make it dynamic
+</script>
+
+</body>
+</html>
