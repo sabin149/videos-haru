@@ -29,10 +29,10 @@
       <input type="number" id='result'>
     </p>
     <p>
-      <button type="button" onclick='operation('+')'>+</button>
-      <button type="button" onclick='operation('-')'>-</button>
-      <button type="button" onclick='operation('*')'>*</button>
-      <button type="button" onclick='operation('/')'>/</button>
+      <button type="button" onclick='operation("+" )'>+</button>
+      <button type="button" onclick='operation("-")'>-</button>
+      <button type="button" onclick='operation("*")'>*</button>
+      <button type="button" onclick='operation("/")'>/</button>
     </p>
   </form>
   <script>
@@ -50,19 +50,19 @@
       } else
       {
         switch (op) {
-          case '+';
+          case '+':
           document.getElementById('result').value = (Number(a) + Number(b));
           break;
-          case '-';
+          case '-':
           document.getElementById('result').value = (Number(a) - Number(b));
           break;
-          case '*';
+          case '*':
           document.getElementById('result').value = (Number(a) * Number(b));
           break;
-          case '/';
+          case '/':
           document.getElementById('result').value = (Number(a) / Number(b));
           default:
-          case '+';
+          case '+':
           document.getElementById('result').value = 0;
         }
       }

@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <script type="text/javascript">
-var a =-2;
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  function fn1() {
+    var str = document.getElementById('text1').value;
+        var stri = document.getElementById('text2').value;
+    alert(str+stri);
+  }
+</script>
 
-if   (a>0)
-{
-document.write("positive");
-if (a%2==0){
-  document.write("------even")
-}
-else{
-  document.write("------odd")
-}
-}
-else if(a<0){
-  document.write("negative");
-}
-else{
-  document.write("nope");
-}
+<body>
+  <input id="text1" type="text" name="" value="" placeholder="enter">
+  <br>
+  <input id="text2" type="password" name="" value="" placeholder="enter">
+  <br>
+  <button id="btn1" type="button" name="button" onclick="fn1()">click</button>
 
-    </script>
+</body>
 
-  </body>
 </html>

@@ -1,55 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title </head>
 
-  <meta charset="utf-8">
-  <title></title>
-</head>
 <body>
-  <input type="number"value="" id="usr_input">
-  <input type="button" value="Calculate" onclick="multip()">
-  <table border="3" id="mul-tbl">
-    <script type="text/javascript">
-      function multip()
-      {
-        num = document.getElementById(' usr_input').value;
-        var output =  '';
-        for (i =1; i <= 10; i++)
-        {
-          output +=  '<tr><td>' + num + 'x' + i + '=' + num * i + '<tr><td>'
+  <div id="nesting">
+    <input type="number" id="usr_input" />
+    <input type="button" value="Calculate" onclick="multiply()" />
+    <table id="mul-tbl" border="1">
+
+    </table>
+  </div>
+  <script>
+    function multiply() {
+      num = document.getElementById('usr_input').value;
+      var output = '';
+
+      for (i = 1; i <= num; i++) {
+        output += '<tr>';
+        for (j = 1; j <= 10; j++) {
+          output += '<td>' + i + 'x' + j + '=' + j * i + '</td>';
         }
-        document.getElementById('mul-tbl').innerHTML = output;
+        output += '</tr>';
       }
-
-
-
-      // for (i=1; i<=10; i++){
-      //   document.write('<tr>');
-      //   for (j=1; j<=10; j++){
-      //     document.write('<td>'+ i + 'x'+ j + ' = '+ i*j + '</td>');
+      // i = 1;
+      // while (i <= num) {
+      //   output += '<tr>';
+      //   j = 1;
+      //   while (j <= 10) {
+      //     output += '<td>' + i + 'x' + j + '=' + j * i + '</td>';
+      //     j++;
       //   }
-      //   document.write('</tr>');
+      //   output += '</tr>';
+      //   i++;
       // }
-    </script>
-  </table>
+      document.getElementById('mul-tbl').innerHTML = output;
+    }
+  </script>
 
 </body>
 
 </html>
-<!-- /* body{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-table{
-background:skyblue;
-margin-top: 100px;
-font-size:25px;
-font-weight:700;
-text-align: center;
-}
-td{
-padding: 10px;
-} */ -->
