@@ -1,76 +1,145 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <title></title>
 </head>
 
 <body>
 
-  <!-- Javascript -->
+  <!--
+  <input type="text" id="first-name" onkeyup="funName(this.value)">
+  <input type="text" id='last-name' onkeyup="funName(this.value)">
 
-  <!-- to make web page more interactive -->
+  <input type="radio" id="male" value="Male" onmouseover="funTwist()">Male
+  <input type="radio" id="female" value="Female" onfocus="console.log('c')">Female
+  <input type="radio" id="other" value="other" onkeyup="console.log('f')">other
+  <input type='button' value='Click' onclick="changeStyle()"> -->
 
-  <!-- javascript can manipulate DOM -->
+  <div id="my-div">
+    <select id="color" onchange="changeStyle('text', this.value)">
+      <option value="">Choose a color</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="cyan">Cyan</option>
+    </select>
 
-  <!-- <h1 id="test" onmouseover="myFunction()" onmouseout="myFunction1()">Welcome</h1> -->
-  <form action="">
-    <p>
-      <label for="">Num 1:</label>
-      <input type="number" id='num1'>
-    </p>
-    <p>
-      <label for="">Num 2:</label>
-      <input type="number" id='num2'>
-    </p>
-    <p>
-      <label for="">Result:</label>
-      <input type="number" id='result'>
-    </p>
-    <p>
-      <button type="button" onclick='operation("+" )'>+</button>
-      <button type="button" onclick='operation("-")'>-</button>
-      <button type="button" onclick='operation("*")'>*</button>
-      <button type="button" onclick='operation("/")'>/</button>
-    </p>
-  </form>
-  <script>
+    <select id="bg" onchange="changeStyle('bg',this.value)">
+      <option value="">Choose a bgcolor</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="cyan">Cyan</option>
+    </select>
 
-    var op = '+';
+    <select id="size" onchange="changeStyle('size',this.value)">
+      <option value="">Choose a fontSize</option>
+      <option value="10px">10px</option>
+      <option value="20px">20px</option>
+      <option value="30px">30px</option>
+    </select>
 
-    function operation(op) {
+    <select id="family" onchange="changeStyle('family',this.value)">
+      <option value="">Choose a family</option>
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Calibri">Calibri</option>
+      <option value="Monotype corsiva">Monotype corsiva</option>
+      <option value="Roboto">Roboto</option>
+    </select>
 
-      var a = document.getElementById('num1').value;
-      var b = document.getElementById('num2').value;
-      if (a == ' ') {
-        alert('enter no');
-      } else if (b == ' ') {
-        alert("enter no");
-      } else
-      {
-        switch (op) {
-          case '+':
-          document.getElementById('result').value = (Number(a) + Number(b));
-          break;
-          case '-':
-          document.getElementById('result').value = (Number(a) - Number(b));
-          break;
-          case '*':
-          document.getElementById('result').value = (Number(a) * Number(b));
-          break;
-          case '/':
-          document.getElementById('result').value = (Number(a) / Number(b));
-          default:
-          case '+':
-          document.getElementById('result').value = 0;
-        }
-      }
-    }
-  </script>
+    <h1 id="output">
+      See output here.
+    </h1>
 
+  </div>
 
+  <div id="country-div">
+<select class="" id="country" name="">
+
+</select>
+  </div>
 
 </body>
+
+<script type="text/javascript">
+  function changeStyle(key,val) {
+var show =  document.getElementById('output').style;
+    switch (key) {
+      case "text":
+      show.color = val;
+        break;
+
+      case "bg":
+  show.background = val;
+        break;
+
+      case "size":
+        show.fontSize = val;
+        break;
+
+      case "family":
+        show.fontFamily = val;
+        break;
+
+      default:
+    show.background = '#fff';
+
+    }
+
+  }
+
+  var country_list = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
+    "Anguilla", "Antigua &amp; Barbuda", "Argentina", "Armenia", "Aruba", "Australia",
+    "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus",
+    "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia &amp; Herzegovina",
+    "Botswana", "Brazil", "British Virgin Islands", "Brunei",
+    "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Cape Verde",
+    "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands",
+    "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus",
+    "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+    "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia",
+    "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia",
+    "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar",
+    "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea",
+    "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland",
+    "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy",
+    "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kuwait",
+    "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya",
+    "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar",
+    "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius",
+    "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco",
+    "Mozambique", "Namibia", "Nepal", "Netherlands", "Netherlands Antilles",
+    "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman",
+    "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru",
+    "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania",
+    "Russia", "Rwanda", "Saint Pierre &amp; Miquelon", "Samoa", "San Marino", "Satellite",
+    "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore",
+    "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka",
+    "St Kitts &amp; Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname",
+    "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania",
+    "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad &amp; Tobago", "Tunisia",
+    "Turkey", "Turkmenistan", "Turks &amp; Caicos", "Uganda", "Ukraine",
+    "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Venezuela",
+    "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"
+  ];
+
+//   for (i=0; i<country_list.length;i++){
+// document.getElementById('country').innerHTML+=
+//  '<option value=" '+ country_list[i] +' "> '+ country_list[i]  +'</option>';
+// };
+
+output = '';
+country_list.forEach(countryLoop);
+
+function countryLoop(item, index)
+{
+output +=
+'<option value="'+ item +'">'+ item +'</option>';
+}
+
+document.getElementById('country').innerHTML = output;
+
+</script>
 
 </html>
