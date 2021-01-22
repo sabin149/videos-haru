@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>MarkSheet</title>
+
+</head>
+<style media="screen">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+background: linear-gradient(to top, #5c8ac7 100%, #3c3a82 100%);
+}
+label{
+  font-weight: 600;
+  font-size: 20px;
+}
+section{
+  padding: 0px 350px 0px 350px;
+}
+form{
+      padding:10px 0px 0px 0px;
+}
+form input{
+  padding-top: 10px;
+  padding-left: 25px;
+  border-radius: 5px;
+border: 2px solid #3d405b;
+}
+
+form td input{
+  margin-left: 70px;
+}
+.subjects{
+  margin-top: -100px;
+  float: right;
+}
+#date input{
+padding-left: 43px;
+}
+
+.button{
+  margin-top: 15px;
+  margin-left: 0px;
+  padding: 5px;
+  background-color: #f77f00;
+  color:white;
+  border-radius: 7px;
+  border: 1px solid #f77f00;
+}
+
+#details-output{
+  margin-top: 20px;
+}
+#marks{
+  margin-top: 20px;
+}
+.container td{
+  font-weight: 600;
+  font-size: 20px;
+}
+#marks td{
+border: 2px solid black;
+padding: 10px;
+}
+#total,#percent,#grade{
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+</style>
+<body>
+  <section>
+
+    <div class="main">
+      <form>
+        <table>
+          <tr>
+            <td> <label>Name</label></td>
+            <td> <input id="name" type="text" name="" required></td>
+          </tr>
+          <tr>
+            <td><label>Class</label></td>
+            <td> <input id="class-0" type="text" name="" required></td>
+          </tr>
+          <tr id="date">
+            <td><label>DOB</label></td>
+            <td> <input id="dob" type="date" name="" required></td>
+          </tr>
+
+        </table>
+
+
+        <div class="subjects">
+          <table>
+            <tr>
+              <td><label>Math</label></td>
+              <td><input id="math" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label>Science</label></td>
+              <td><input id="science" type="text" name="" value="" required></td>
+            </tr>
+            <tr>
+              <td><label>English</label></td>
+              <td><input id="english" type="text" name="" value="" required></td>
+            </tr>
+            <tr>
+              <td><label>Nepali</label></td>
+              <td><input id="nepali" type="text" name="" value="" required></td>
+            </tr>
+            <tr>
+              <td><label>Health</label></td>
+              <td><input id="health" type="text" name="" value="" required></td>
+            </tr>
+          </table>
+        </div>
+          <input class="button" type="button" value="Generate" onclick="details()">
+      </form>
+
+    </div>
+<div class="container">
+    <div id="details-output">
+    </div>
+
+    <div id="marks">
+    </div>
+    <div id="total">
+    </div>
+    <div id="percent">
+    </div>
+    <div id="grade">
+    </div>
+  </div>
+  </section>
+
+  <script type="text/javascript">
+    function details() {
+      let name = document.getElementById('name').value;
+      let classs = document.getElementById('class-0').value;
+      let dob = document.getElementById('dob').value;
+
+      let math = document.getElementById('math').value;
+      let science = document.getElementById('science').value;
+      let english = document.getElementById('english').value;
+      let nepali = document.getElementById('nepali').value;
+      let health = document.getElementById('health').value;
+
+      let info_output = '<table>' +
+        '<tr ><td>Name:</td><td>' + name + '</td></tr>' +
+        '<tr><td>Class:</td><td>' + classs + '</td></tr>' +
+        '<tr><td>Date of Birth:</td><td>' + dob + '</td></tr>' +
+        '</table>';
+      document.getElementById('details-output').innerHTML = info_output;
+
+      let subject_output = '<table>' +
+        '<tr ><td>Math</td><td>' + math + '</td></tr>' +
+        '<tr ><td>Science</td><td>' + science + '</td></tr>' +
+        '<tr ><td>English</td><td>' + english + '</td></tr>' +
+        '<tr ><td>Nepali</td><td>' + nepali + '</td></tr>' +
+        '<tr ><td>Health</td><td>' + health + '</td></tr>' +
+        '</table>';
+      document.getElementById('marks').innerHTML = subject_output;
+
+      if (math > 100 || science > 100 || english > 100 || nepali > 100 || health > 100) {
+        alert("Insert Marks Less Than 100!");
+}
+        let total = eval(parseFloat(math) + parseFloat(science) + parseFloat(english) + parseFloat(nepali) + parseFloat(health));
+        document.getElementById("total").innerHTML = 'Total:' + total;
+
+
+        let percentage = eval(parseFloat(total / 500) * 100);
+        document.getElementById("percent").innerHTML = 'Percentage:' + percentage + '%';
+
+
+        switch (true) {
+          case (percentage >= 80 && percentage <= 100):
+            document.getElementById("grade").innerHTML = "A+";
+            break;
+          case (percentage >= 70 && percentage < 80):
+            document.getElementById("grade").innerHTML = " Grade:" + "A";
+            break;
+          case (percentage >= 60 && percentage < 70):
+            document.getElementById("grade").innerHTML = " Grade:" + "B+";
+            break;
+          case (percentage >= 50 && percentage < 60):
+            document.getElementById("grade").innerHTML = " Grade:" + "C+";
+            break;
+          case (percentage >= 40 && percentage < 50):
+            document.getElementById("grade").innerHTML = " Grade:" + "C";
+            break;
+          case (percentage >= 30 && percentage < 40):
+            document.getElementById("grade").innerHTML = " Grade:" + "D";
+            break;
+          case (percentage >= 0 && percentage < 30):
+            document.getElementById("grade").innerHTML = " Grade:" + "E";
+            break;
+          case (percentage < 0):
+            document.getElementById("grade").innerHTML = " Grade:" + "Invalid";
+            break;
+        }
+    }
+  </script>
+</body>

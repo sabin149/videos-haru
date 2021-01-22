@@ -48,43 +48,38 @@
       <option value="Roboto">Roboto</option>
     </select>
 
-    <h1 id="output">
+    <h1 id="output-0">
       See output here.
     </h1>
 
   </div>
 
   <div id="country-div">
-<select class="" id="country" name="">
+    <select class="" id="country" name="">
 
-</select>
+    </select>
   </div>
 
 </body>
 
 <script type="text/javascript">
-  function changeStyle(key,val) {
-var show =  document.getElementById('output').style;
+  function changeStyle(key, val) {
+    var show = document.getElementById('output-0').style;
     switch (key) {
       case "text":
-      show.color = val;
+        show.color = val;
         break;
-
       case "bg":
-  show.background = val;
+        show.background = val;
         break;
-
       case "size":
         show.fontSize = val;
         break;
-
       case "family":
         show.fontFamily = val;
         break;
-
       default:
-    show.background = '#fff';
-
+        show.background = '#fff';
     }
 
   }
@@ -124,22 +119,65 @@ var show =  document.getElementById('output').style;
     "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"
   ];
 
-//   for (i=0; i<country_list.length;i++){
-// document.getElementById('country').innerHTML+=
-//  '<option value=" '+ country_list[i] +' "> '+ country_list[i]  +'</option>';
-// };
+  //   for (i=0; i<country_list.length;i++){
+  // document.getElementById('country').innerHTML+=
+  //  '<option value=" '+ country_list[i] +' "> '+ country_list[i]  +'</option>';
+  // };
 
-output = '';
-country_list.forEach(countryLoop);
+  output = '';
+  country_list.forEach(countryLoop);
 
-function countryLoop(item, index)
-{
-output +=
-'<option value="'+ item +'">'+ item +'</option>';
-}
+  function countryLoop(item, index) {
+    output +=
+      '<option value="' + item + '">' + item + '</option>';
+  }
 
-document.getElementById('country').innerHTML = output;
+  document.getElementById('country').innerHTML = output;
 
+
+  /*
+  print methods
+  --------------
+  alert('Hello');
+  document.write('Hello');
+  console.log('Hello');
+  document.getElementsByTagName('h1')[0].innerHTML = 'Content Print';
+
+  select DOM Objects
+  --------------------
+  console.log(document.getElementById('test'));
+  console.log(document.getElementsByTagName('h1')[0]);
+  console.log(document.getElementsByClassName('my-para'));
+
+  actions (user events)
+  ---------------------
+  onmouseover onmouseout onclick onfocus onfocusout onblur
+  onkeydown onkeyup onchecked onselected onchange
+
+  what can JS change in HTML Document
+  ------------------------------------
+  content
+  DOM
+  style
+
+  document.getElementById('test').innerHTML = 'Javascript';
+  document.getElementById('my-div').innerHTML
+  = '<h1>Text Content</h1><p>This is paragraph</p>';
+  document.getElementById('test').style.color = 'red';
+  */
+  /*
+  inputs
+  -------
+  name
+  class
+  dob
+  subjects & marks
+  output
+  -------
+  marksheet(table layout) with all details, %, grade
+  */
 </script>
+
+
 
 </html>

@@ -21,7 +21,7 @@ width: 100px;
 <form name="reg-frm" >
 <p>
 <label>Name</label>
-<input type="text" id="name" name="name" required />
+<input type="text" id="name" name="" required />
 </p>
 <p>
 <label>Address</label>
@@ -68,14 +68,9 @@ var username = document.forms['reg-frm']['username'].value;
 var password = document.forms['reg-frm']['password'].value;
 var password1 = document.forms['reg-frm']['password1'].value;
 
-var valid_name = /^[A-Z a-z]+$/;
 if(password != password1)
 {
 alert('Password mismatch');
-}
-else if(!name.match(valid_name))
-{
-alert('Name can only have alphabets');
 }
 else
 {
