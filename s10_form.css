@@ -13,7 +13,7 @@ selectors
 
 section .frm-div
 {
-margin: 10px;
+margin: 5px;
 }
 section label
 {
@@ -38,7 +38,7 @@ width: 300px;
 }
 section textarea
 {
-height: 200px;
+height: 00px;
 }
 section input[type="radio"], section input[type="checkbox"], section input[type="submit"]
 {

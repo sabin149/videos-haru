@@ -1,13 +1,16 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Javascript</title>
+<title>Welcome</title>
+<link href="s10_form.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<!-- Semantic elements - HTML5 -->
+<div id="main">
 
-<div id="frm-div">
-<h1 id="test">User Registration</h1>
-<form name="reg-frm">
+
+<section>
+<form name="reg-frm" >
 <div class="frm-div">
 <label>Name:</label>
 <input type="text" name="name" placeholder="Enter Name" maxlength="5" required>
@@ -15,7 +18,7 @@
 
  <div class="frm-div">
 <label>DOB:</label>
-<input type="date" name="dob" />
+<input type="date" name="dob" max="1980-01-01" min="1900-01-01" value="2020-12-16" />
 </div>
 
  <div class="frm-div">
@@ -60,11 +63,11 @@
 
  <div class="frm-div">
 <label>Hobbies:</label>
-<input type="checkbox" name="hobbies" value="Music" >
+<input type="checkbox" name="hobbies[]" value="Music" >
 <label class="opt-label">Music</label>
-<input type="checkbox" name="hobbies" value="Travel" >
+<input type="checkbox" name="hobbies[]" value="Travel" >
 <label class="opt-label">Travel</label>
-<input type="checkbox" name="hobbies" value="Other" checked >
+<input type="checkbox" name="hobbies[]" value="Other" checked >
 <label class="opt-label">Other</label>
 </div>
 
@@ -85,7 +88,7 @@
 
  <div class="frm-div">
 <label>Rating:</label>
-<input type="range" name="rating">
+<input type="range" name="rating" max="5" min="0">
 </div>
 
  <div class="frm-div">
@@ -97,33 +100,26 @@
 <input type="submit" name="register" value="Register">
 <button type="submit">Register</button>
 <button type="reset">Reset</button>
-<button type="button" onclick="showValue()">Click</button>
+<button type="button">Click</button>
 </div>
 </form>
+</section>
+<article></article>
+<aside></aside>
+<footer></footer>
 </div>
-<script>
+</body>
 
- var my_object = [{'name': 'Bibek Ghimire', 'sem': '3rd', 'CUID': 190165},
-{'name': 'Bibek Ale', 'sem': '3rd', 'CUID': 111222},
-{'name': 'Bibek Khatri', 'sem': '3rd', 'CUID': 222333},
-{'name': 'Bivek Rijal', 'sem': '3rd', 'CUID': 333444}];
-//alert(my_object[1].CUID);
-// create required functions & trigger them in required users' actions
-// select required elements, attributes
-// change required content, attributes, styles
-//
-//function showValue()
-//{
-// var a = document.forms['reg-frm']['hobbies'].value;
-// alert(a);
-// }
+<script type="text/javascript" src="">
+// var my_object = [{​​'name': 'Bibek Ghimire', 'sem': '3rd', 'CUID': 190165}​​,
+// {​​'name': 'Bibek Ale', 'sem': '3rd', 'CUID': 111222}​​,
+// {​​'name': 'Bibek Khatri', 'sem': '3rd', 'CUID': 222333}​​,
+// {​​'name': 'Bivek Rijal', 'sem': '3rd', 'CUID': 333444}​​];
+// alert(my_object[1].CUID);
 
-// document.getElementsByTagName('h1')[0].setAttribute('align', "center");
-// var b =document.getElementById('test').style.textAlign = "center";
-document.getElementsByTagName('h1')[0].align = 'center';
-// alert(document.getElementsByTagNamed('h1')[0].getAttribute('class'));
+console.log("fuck you")
 
 </script>
 
-</body>
+
 </html>
