@@ -1,13 +1,29 @@
-#seco{
-
+.main{
+border: 2px solid red;
+height: 500px;
+width: 1000px;
+display: flex;
+flex-direction: row;
+justify-content:center;
+align-items: center;
+flex-wrap: wrap-reverse;
 }
-#thir{
-
+*{
+  margin:0;
+  padding: 0;
 }
-.container{
-  text-align: center;
-  font-size: 10px;
+#f1{
+height: 100px;
+width: 100px;
+background: red;
 }
-#first{
-  font-size: 10em;
+#f2{
+  height: 100px;
+  width: 100px;
+  background: green;
+}
+#f3{
+  height: 100px;
+  width: 100px;
+  background: grey;
 }

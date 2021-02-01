@@ -1,18 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>J query</title>
-  <script type="text/javascript" src="js5jquery">
-
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jquery</title>
+  <script src="js5jq.js"></script>
 </head>
 
 <body>
-  <div id="frm-div">
-    <h1>Welcome Jquery</h1>
-  </div>
+  <div class="frm-div">
+    <h1 id="show" style="font-family: poppins;">Hello Softwarica</h1>
+    <input type="submit" name="" id="toggler" value="Hide">
+    <br>
+    <div class="test"
+    style="position: relative; height: 500px; width: 500px; background: red;">
+    </div>
+    <input type="submit" name="" id="div-tog" value="Hide">
+    <input type="submit" name="" id="fade" value="Fade">
+
+    <script>
+      var hidden=false;
+      $("#toggler").click(function () {
+        if(hidden==false){
+          $("#show").hide(5000);
+          hidden=true;
+          $("#toggler").val("Show");
+        }else{
+          $("#show").show(5000);
+          hidden=false;
+          $("#toggler").val("Hide");
+        }
+      });
+
+      var divdis=false;
+      $("#div-tog").click(function () {
+        if(divdis==false){
+          // $(".test").hide(500);
+          // $(".test").fadeOut(500);
+          // $(".test").slideUp(500);
+          $(".test").animate({left: '600px'},2000);
+          divdis=true;
+          $("#div-tog").val("Show");
+        }else{
+          // $(".test").show(500);
+          // $(".test").fadeIn(500);
+          // $(".test").slideDown(500);
+          $(".test").animate({left: '0px'},2000);
+          divdis=false;
+          $("#div-tog").val("Hide");
+        }
+      });
+
+      $("#fade").click(function(){
+        $(".test").fadeToggle(500);
+      })
+
+    </script>
 </body>
 
 </html>
