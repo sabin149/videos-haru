@@ -11,50 +11,57 @@
 <body>
   <div class="frm-div">
     <h1 id="show" style="font-family: poppins;">Hello Softwarica</h1>
-    <input type="submit" name="" id="toggler" value="Hide">
+    <input type="submit" name="" id="t-btn" value="Hide">
     <br>
     <div class="test"
-    style="position: relative; height: 500px; width: 500px; background: red;">
+    style="position: relative; height: 500px; width: 500px; background: black;">
     </div>
     <input type="submit" name="" id="div-tog" value="Hide">
     <input type="submit" name="" id="fade" value="Fade">
 
     <script>
-      var hidden=false;
-      $("#toggler").click(function () {
-        if(hidden==false){
-          $("#show").hide(5000);
-          hidden=true;
-          $("#toggler").val("Show");
-        }else{
-          $("#show").show(5000);
-          hidden=false;
-          $("#toggler").val("Hide");
-        }
-      });
 
-      var divdis=false;
-      $("#div-tog").click(function () {
-        if(divdis==false){
-          // $(".test").hide(500);
-          // $(".test").fadeOut(500);
-          // $(".test").slideUp(500);
-          $(".test").animate({left: '600px'},2000);
-          divdis=true;
-          $("#div-tog").val("Show");
-        }else{
-          // $(".test").show(500);
-          // $(".test").fadeIn(500);
-          // $(".test").slideDown(500);
-          $(".test").animate({left: '0px'},2000);
-          divdis=false;
-          $("#div-tog").val("Hide");
-        }
-      });
+      // var hidden= true;
+      // $("#t-btn").click(function(){
+      //   if(hidden==true){
+      //     $("#show").hide(500);
+      //     hidden=false;
+      //      $("#t-btn").val("Show");
+      //   }else{
+      //     $("#show").show(500);
+      //         // hidden=true;
+      //         $("#t-btn").val("Hide");
+      //   }
+      // })
+      $(document).ready(function(){
+        $('#t-btn').click(function(){
+  $('h1').toggle(10000);
+  });
 
-      $("#fade").click(function(){
-        $(".test").fadeToggle(500);
       })
+
+      // var divdis=false;
+      // $("#div-tog").click(function () {
+      //   if(divdis==false){
+      //     // $(".test").hide(500);
+      //     // $(".test").fadeOut(500);
+      //     // $(".test").slideUp(500);
+      //     $(".test").animate({left: '600px'},2000);
+      //     divdis=true;
+      //     $("#div-tog").val("Show");
+      //   }else{
+      //     // $(".test").show(500);
+      //     // $(".test").fadeIn(500);
+      //     // $(".test").slideDown(500);
+      //     $(".test").animate({top: '100px'},2000);
+      //     divdis=false;
+      //     $("#div-tog").val("Hide");
+      //   }
+      // });
+      //
+      // $("#fade").click(function(){
+      //   $(".test").fadeToggle(500);
+      // })
 
     </script>
 </body>
